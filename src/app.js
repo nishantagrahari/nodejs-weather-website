@@ -5,6 +5,8 @@ const path = require('path');
 const express=require("express");
 const hbs=require('hbs');
 
+const port = process.env.port || 3000;  // making environment variable for heoku and 3000 for local machine.
+
 const app=express();
 
 //defining path for different files
@@ -87,7 +89,7 @@ app.get('*',(req,res)=>{
    })
 });
 
-app.listen(3000,()=>{
+app.listen(port,()=>{
 
     console.log("server connected");
  });

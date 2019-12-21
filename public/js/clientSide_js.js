@@ -20,7 +20,7 @@ form.addEventListener('submit',(e)=>{
         message1.textContent='You must provide address';
     }else{
     
-    fetch('http://localhost:3000/weather?address='+ inputValue).then((response)=>{
+    fetch('/weather?address='+ inputValue).then((response)=>{
         response.json().then((data)=>{
             if(data.error)
             {

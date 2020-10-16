@@ -16,11 +16,11 @@ const partialsPath=path .join(__dirname,'../templates/partials');
 
 
 //setup view engine
-app.set('view engine','hbs');
+app.set('view engine','hbs'); // to tell express we are using hbs for handle bars.
 app.set('views',viewPath);
 hbs.registerPartials(partialsPath);
 
-app.use(express.static(directory));
+app.use(express.static(directory));//static means it is fixed
 
 
 //configuration for different routes
@@ -30,7 +30,7 @@ app.use(express.static(directory));
  });*/
 
 app.get('',(req,res)=>{    //for index route
-   res.render('index',{
+   res.render('index',{   //render for handle bars template
       title:'Weather',
       name:'Nishant Agrahari'
    })
